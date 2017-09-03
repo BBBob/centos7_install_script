@@ -1,3 +1,4 @@
+#!/bin/sh
 git clone https://github.com/ranger/ranger.git
 cd ranger
 sudo easy_install pip
