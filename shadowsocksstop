@@ -1,2 +1,2 @@
 #!/bin/sh
-ssserver -c /etc/shadowsocks.json -d stop 
+sudo ssserver -c /etc/shadowsocks.json -d stop 
