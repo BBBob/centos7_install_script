@@ -25,7 +25,7 @@ cd ..
 
 # shadowsocks start
 sudo pip install shadowsocks
-./shadowsocks_install.sh
+sudo ./shadowsocks_install.sh
 # shadowsocks end
 
 # virt-what start
