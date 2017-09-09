@@ -1,13 +1,13 @@
 #!/bin/sh
 # mirror start
-yum -y install epel-release
+yum install epel-release -y
 # mirror end
 
 # mkuser start
-groupadd users
-useradd -m -g users -s /bin/zsh BBBob
-passwd BBBob
-echo "BBBob  ALL=(ALL)   ALL" | sudo tee -a /etc/sudoers
+groupadd $1
+useradd -m -g $1 -s /bin/bash $1
+echo "$1    ALL=(ALL:ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
+passwd $1
 echo "please exit and log in with new user now!"
 #sudo vim /etc/sudoers
 # mkuser end
