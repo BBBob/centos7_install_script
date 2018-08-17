@@ -17,7 +17,7 @@ sudo yum install htop -y
 sudo yum install aria2.x86_64  -y
 sudo cp aria2start /usr/bin/
 mkdir -p $HOME/.config/aria2
-sudo cp aria2.conf $HOME/.config/aria2/
+sudo cp config/aria2.conf $HOME/.config/aria2/
 # tools end
 
 # ranger start
@@ -57,3 +57,7 @@ sudo yum install certbot-nginx -y
 sudo certbot --nginx
 # https ssl  end
 
+
+# tmux start
+sudo ./install_tmux.sh
+# tmux end

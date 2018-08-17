@@ -16,7 +16,7 @@ passwd $1
 
 HOME=/home/$1
 mkdir -p $HOME/.ssh
-cat id_rsa.pub >> $HOME/.ssh/authorized_keys
+cat config/id_rsa.pub >> $HOME/.ssh/authorized_keys
 chown -R $1:$1 $HOME/.ssh
 #chmod 755 $HOME
 chmod 700 $HOME/.ssh
