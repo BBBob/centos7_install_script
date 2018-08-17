@@ -11,7 +11,7 @@ fi
 # mkuser start
 groupadd $1
 useradd -m -g $1 -s /bin/bash $1
-echo "$1    ALL=(ALL:ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
+echo "$1  ALL=(ALL:ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
 passwd $1
 
 HOME=/home/$1
