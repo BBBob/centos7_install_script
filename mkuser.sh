@@ -3,6 +3,11 @@
 yum install epel-release -y
 # mirror end
 
+if (( $# < 1 )) ; then
+    echo "please input user name"
+    exit
+    #statements
+fi
 # mkuser start
 groupadd $1
 useradd -m -g $1 -s /bin/bash $1
@@ -12,6 +17,8 @@ passwd $1
 HOME=/home/$1
 mkdir -p $HOME/.ssh
 cat id_rsa.pub >> $HOME/.ssh/authorized_keys
+chown -R $1:$1 $HOME/.ssh
+#chmod 755 $HOME
 chmod 700 $HOME/.ssh
 chmod 600 $HOME/.ssh/authorized_keys
 
