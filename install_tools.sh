@@ -1,4 +1,10 @@
 #!/bin/sh
+
+sudo yum remove epel-release.noarch -y
+sudo rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+sudo yum clean all
+sudo yum update -y
+
 # zsh start
 sudo yum install neovim -y
 sudo yum install zsh -y
