@@ -1,0 +1,11 @@
+yum -y install iptables-services
+systemctl mask firewalld
+systemctl enable iptables
+systemctl stop firewalld
+systemctl start iptables
+echo "请到/etc/sysconfig/iptables中修改防火墙规则并重启服务"
+# 添加放行端口
+# iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport <newport> -j ACCEPT
+# iptables -I INPUT -m state --state NEW -m udp -p udp --dport <newport> -j ACCEPT
+# iptables-save
+

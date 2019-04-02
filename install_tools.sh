@@ -4,6 +4,7 @@ sudo yum remove epel-release.noarch -y
 sudo rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
 sudo yum clean all
 sudo yum update -y
+sudo yum install unzip -y
 
 # zsh start
 sudo yum install neovim -y
@@ -61,3 +62,14 @@ sudo certbot --nginx
 # tmux start
 sudo ./install_tmux.sh
 # tmux end
+
+# python 3.6 start
+sudo yum install python36 python36-setuptools python36-devel.x86_64 -y
+sudo ln -s  /usr/bin/python36 /usr/bin/python3
+sudo easy_install-3.6 pip
+# python 3.6 end
+
+# npm start
+sudo yum install npm -y
+# npm end
+
