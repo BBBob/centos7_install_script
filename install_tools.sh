@@ -22,16 +22,7 @@ sudo cp config/aria2.conf $HOME/.config/aria2/
 # tools end
 
 # ranger start
-sudo yum install python-setuptools python-setuptools-devel -y
-sudo easy_install pip
-sudo pip install pylint
-sudo pip install pytest
-sudo pip install flake8
-git clone https://github.com/ranger/ranger.git
-cd ranger
-make
-sudo make install
-cd ..
+sudo ./install_ranger.sh
 # ranger end
 
 # shadowsocks start
